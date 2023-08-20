@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["esnext"],
+    "alwaysStrict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "composite": true
+  },
+  "exclude": ["**/dist"]
+}
