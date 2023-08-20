@@ -1,0 +1,22 @@
+{
+  "1": {
+    "Auction": "",
+    "AuctionProxy": "",
+    "AuctionProxyAdmin": ""
+  },
+  "5": {
+    "Auction": "0x1461E416bfA3655F0b04104Da1468A76B139380f",
+    "AuctionProxy": "0x2DD9ad3B61ac31C45E68975Ae16683778C87823E",
+    "AuctionProxyAdmin": "0xB6F4CFC3Dc51dBdF93d23Ba6bEa8b1e5c771a218"
+  },
+  "31337": {
+    "Auction": "",
+    "AuctionProxy": "",
+    "AuctionProxyAdmin": ""
+  },
+  "11155111": {
+    "Auction": "0x1A0c0aa06518Ae25322461f271D635D671f93Cff",
+    "AuctionProxy": "0xd5a2392564531838003d09238D301fD08Da56D4b",
+    "AuctionProxyAdmin": "0x6434557D2EA6d17E73Ba906E0Ac1f42930F8151C"
+  }
+}
