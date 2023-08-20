@@ -31,7 +31,7 @@ Samples of contracts repository.
 | Hardhat |  Test for solidity smart contract, script, tools ([Overview of Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview)) |
 
 ## Install Dependencies
-- ⚠️ Install `yarn` if you have not installed. ([Reference](https://classic.yarnpkg.com/lang/en/docs/install))
+⚠️ Install `yarn` if you have not installed. ([Reference](https://classic.yarnpkg.com/lang/en/docs/install))
 ```sh
 yarn
 ```
