@@ -1,7 +1,7 @@
 # contract-samples-hardhat
 Samples of contracts repository.
 
-## Contracts
+# Contracts
 - [Auction](contracts/Auction.sol)
 - [AuctionNFTBase](contracts/tokens/AuctionNFTBase.sol) (or use [AuctionNFTBaseUpgradeable](contracts/tokens/AuctionNFTBaseUpgradeable.sol) for upgradeable contract)
 
@@ -19,6 +19,22 @@ Samples of contracts repository.
 8. Owner settles auction to transfer NFT and ETH
 
 **See [Auction Contract Specification](contracts/README.md) for speficiations and description of auction contract**
+
+# Quickstart
+
+## Requirements
+
+| Name | Used for |
+|-|-|
+| TypeScript | Test for solidity smart contract, script, tools |
+| solc | solidity commandline compiler for compiling solidity code, running test, etc |
+| Hardhat |  Test for solidity smart contract, script, tools ([Overview of Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview)) |
+
+## Install Dependencies
+- ⚠️ Install `yarn` if you have not installed. ([Reference](https://classic.yarnpkg.com/lang/en/docs/install))
+```sh
+yarn
+```
 
 # Test
 ```sh
