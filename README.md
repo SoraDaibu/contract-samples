@@ -79,3 +79,6 @@ yarn task:verify --contract [path:contractName] [contractAddress] --network [net
 # ex.) contract on goerli
 yarn task:verify --contract contracts/proxies/AuctionProxy.sol:AuctionProxy 0xF99a8b2DF498bc3ea2044f1943C210A4fd946b2E --network goerli
 ```
+
+# Note
+This smart contract follows various gas optimization methods. Some of the methods can be found [here](https://www.linkedin.com/pulse/optimizing-smart-contract-gas-cost-harold-achiando/).
