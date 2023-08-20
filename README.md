@@ -18,6 +18,8 @@ Samples of contracts repository.
 7. Auction finishes when time comes
 8. Owner settles auction to transfer NFT and ETH
 
+**See [Auction Contract Specification](contracts/README.md) for speficiations and description of auction contract**
+
 # Test
 ```sh
 yarn test
