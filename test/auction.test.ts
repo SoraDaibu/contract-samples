@@ -138,7 +138,7 @@ describe("Auction", () => {
     );
   });
 
-  it("should revert createAuction if nft address does not have supportsInterface of `IAuctionNFT`", async () => {
+  it("should revert createAuction if nft address does not have supportsInterface function", async () => {
     const tx = auction.createAuction(
       auction.address,
       tokenIdStart,
@@ -224,6 +224,28 @@ describe("Auction", () => {
     await expect(tx).to.be.revertedWith("Token already minted");
   });
 
+  it("should revert createAuction if tokenId is already set on auction", async () => {
+    await auction.createAuction(
+      nft.address,
+      tokenIdStart,
+      tokenIdEnd,
+      startAt,
+      finishAt,
+      startingPrice
+    );
+
+    const tx = auction.createAuction(
+      nft.address,
+      tokenIdEnd,
+      tokenIdEnd + 100,
+      startAt,
+      finishAt,
+      startingPrice
+    );
+
+    await expect(tx).to.be.revertedWith("NFT is already on auction");
+  });
+
   it("should create auction and increase auctionId", async () => {
     const beforeAuctionId = await auction.getCurrentAuctionId();
 
@@ -267,11 +289,12 @@ describe("Auction", () => {
 
   describe("when auction exists and will start soon", async () => {
     before(async () => {
+      startAt += oneHour;
       await auction.createAuction(
         nft.address,
         tokenIdStart,
         tokenIdEnd,
-        startAt + oneHour,
+        startAt,
         finishAt,
         startingPrice
       );
@@ -317,15 +340,6 @@ describe("Auction", () => {
 
   describe("when auction is open", async () => {
     before(async () => {
-      await auction.createAuction(
-        nft.address,
-        tokenIdStart,
-        tokenIdEnd,
-        startAt,
-        finishAt,
-        startingPrice
-      );
-
       await ethers.provider.send("evm_increaseTime", [oneHour * 2]);
     });
 
