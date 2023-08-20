@@ -49,7 +49,7 @@ contract AuctionNFTBaseUpgradeable is ERC721EnumerableUpgradeable, OwnableUpgrad
     }
 
     /**
-     * @dev set BaseURI
+     * @dev Set BaseURI
      * @param uri uri string
      */
     function setBaseURI(string memory uri) public onlyOwner {
@@ -57,7 +57,7 @@ contract AuctionNFTBaseUpgradeable is ERC721EnumerableUpgradeable, OwnableUpgrad
     }
 
     /**
-     * @dev return base uri
+     * @dev Return base uri
      * @return returns saved base uri
      */
     function _baseURI() internal view override returns(string memory) {
