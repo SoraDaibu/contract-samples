@@ -50,7 +50,7 @@ contract AuctionNFTBase is ERC721Enumerable, Ownable {
      * @dev Set BaseURI
      * @param uri uri string
      */
-    function setBaseURI(string memory uri) public onlyOwner {
+    function setBaseURI(string memory uri) public virtual onlyOwner {
         baseURI = uri;
     }
 

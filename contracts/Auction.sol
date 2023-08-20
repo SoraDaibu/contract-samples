@@ -157,7 +157,7 @@ contract Auction is IAuction, OwnableUpgradeable, ReentrancyGuardUpgradeable {
     }
 
     function _requireNFTsNotOnAuctions(address token, uint256 tokenIdStart, uint256 tokenIdEnd) internal view {
-        for (uint256 i = 1; i < _currentAuctionId; ++i) {
+        for (uint256 i = 1; i <= _currentAuctionId; ++i) {
             Auction memory auction = _auctions[i];
             if (token == auction.token) {
                 require(!_isOnAuction(auction, tokenIdStart), "NFT is already on auction");
